@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Presente Camille</title>
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            color: aliceblue;
+        }
+
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            top: 50%;
+            left: 50%;
+        }
+
+        div{
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            position: absolute;
+            padding: 80px;
+            border-radius: 15px;
+        }
+
+        input{
+            padding: 30px;
+            border: none;
+            outline: none;
+            display: block;
+            margin: 10px auto;
+            width: 250px;
+            height: 30px;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+
+    <div>
+
+        <h3>Login do meu coração</h3>
+        <input type="text" placeholder="Login" id="login">
+        <input type="password" placeholder="Senha" id="senha">
+        <input type="submit" onclick="logar(); return false">
+        <p>
+            Se ainda não tiver conta, crie uma
+            <a href="/erro/erro.html">Criar conta
+            </a>
+        </p>
+
+    </div>
+
+
+    <script>
+
+
+        function logar(){
+
+            var login = document.getElementById('login').value;
+            var senha = document.getElementById('senha').value;
+
+            if(login == "Camille" && senha == "minhavida"){
+                alert('Sucesso');
+                location.href = "/home/home.html";
+            }else{
+                alert('Otaria, ta fazendo oq aqui?');
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
